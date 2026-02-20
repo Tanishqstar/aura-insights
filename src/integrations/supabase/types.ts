@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      stress_analyses: {
+        Row: {
+          analysis_summary: string | null
+          audio_url: string | null
+          confidence: number | null
+          created_at: string
+          duration_seconds: number
+          id: string
+          pacing_spm: number | null
+          pitch_hz: number | null
+          status: string
+          stress_score: number | null
+          transcript: string | null
+          tremor_index: number | null
+          trigger_keywords: string[] | null
+        }
+        Insert: {
+          analysis_summary?: string | null
+          audio_url?: string | null
+          confidence?: number | null
+          created_at?: string
+          duration_seconds: number
+          id?: string
+          pacing_spm?: number | null
+          pitch_hz?: number | null
+          status?: string
+          stress_score?: number | null
+          transcript?: string | null
+          tremor_index?: number | null
+          trigger_keywords?: string[] | null
+        }
+        Update: {
+          analysis_summary?: string | null
+          audio_url?: string | null
+          confidence?: number | null
+          created_at?: string
+          duration_seconds?: number
+          id?: string
+          pacing_spm?: number | null
+          pitch_hz?: number | null
+          status?: string
+          stress_score?: number | null
+          transcript?: string | null
+          tremor_index?: number | null
+          trigger_keywords?: string[] | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
